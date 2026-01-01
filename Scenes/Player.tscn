@@ -1,0 +1,490 @@
+[gd_scene load_steps=62 format=3 uid="uid://bk0nar2hl27os"]
+
+[ext_resource type="Texture2D" uid="uid://yx3p4s62fvpq" path="res://Sprites/Hassan/Shadow.png" id="1_70hv0"]
+[ext_resource type="Texture2D" uid="uid://d4fxnajg5xccb" path="res://Sprites/Hassan/HassanJump01.png" id="1_miouo"]
+[ext_resource type="Texture2D" uid="uid://gd5vrplnsomt" path="res://Sprites/Hassan/HassanHit01.png" id="1_qidb7"]
+[ext_resource type="Texture2D" uid="uid://cnetmkhkhgxa2" path="res://Sprites/Hassan/HassanWalk01.png" id="1_yoq75"]
+[ext_resource type="Texture2D" uid="uid://c187xida8n2gf" path="res://Sprites/Hassan/HassanHit02.png" id="2_70hv0"]
+[ext_resource type="Texture2D" uid="uid://bs7u03mhcbc7p" path="res://Sprites/Hassan/HassanWalk02.png" id="2_ksbbd"]
+[ext_resource type="Texture2D" uid="uid://cn12js3xqfg6m" path="res://Sprites/Hassan/HassanJump02.png" id="2_o3h8g"]
+[ext_resource type="Texture2D" uid="uid://uodkgk6172yn" path="res://Sprites/Hassan/HassanJump03.png" id="3_1e7my"]
+[ext_resource type="Texture2D" uid="uid://bk1tb6q2ec20s" path="res://Sprites/Hassan/HassanHit03.png" id="3_8flut"]
+[ext_resource type="Texture2D" uid="uid://17uwvnshk8fs" path="res://Sprites/Hassan/HassanWalk03.png" id="3_glx4g"]
+[ext_resource type="Texture2D" uid="uid://dsbl6dfvqjg4y" path="res://Sprites/Hassan/HassanWalk04.png" id="4_miouo"]
+[ext_resource type="Texture2D" uid="uid://rgjc0jwn47wk" path="res://Sprites/Hassan/HassanIdle01.png" id="4_u7x0b"]
+[ext_resource type="Texture2D" uid="uid://bw26ewdn72nws" path="res://Sprites/Hassan/HassanWalk05.png" id="5_o3h8g"]
+[ext_resource type="Texture2D" uid="uid://b0scq7a7v5enl" path="res://Sprites/Hassan/HassanIdle02.png" id="5_utwlt"]
+[ext_resource type="Texture2D" uid="uid://cm047keqbn1jw" path="res://Sprites/Hassan/HassanWalk06.png" id="6_1e7my"]
+[ext_resource type="Texture2D" uid="uid://b8sj6t3oagth1" path="res://Sprites/Hassan/HassanIdle03.png" id="6_kih0c"]
+[ext_resource type="Texture2D" uid="uid://d1fwy17p0fidg" path="res://Sprites/Hassan/HassanWalk07.png" id="7_arntx"]
+[ext_resource type="Texture2D" uid="uid://diruclufhub4c" path="res://Sprites/Hassan/HassanIdle04.png" id="7_lyrkg"]
+[ext_resource type="Texture2D" uid="uid://djw37wea085d5" path="res://Sprites/Hassan/HassanWalk08.png" id="8_lslt6"]
+[ext_resource type="Texture2D" uid="uid://byilekt7dydhs" path="res://Sprites/Hassan/HassanWalk09.png" id="9_ulo2v"]
+[ext_resource type="Texture2D" uid="uid://hacsgnbcm5g" path="res://Sprites/Hassan/HassanTakeDamage01.png" id="11_c43xd"]
+[ext_resource type="Texture2D" uid="uid://h3rgcciur25t" path="res://Sprites/Hassan/HassanTakeDamage02.png" id="12_avx33"]
+[ext_resource type="Texture2D" uid="uid://cg8efyrrkku2p" path="res://Sprites/Hassan/HassanTakeDamage03.png" id="13_rxg2u"]
+[ext_resource type="Texture2D" uid="uid://g5ujmklt2vug" path="res://Sprites/Hassan/HassanTakeDamage04.png" id="14_xixlo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_glx4g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qidb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_70hv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8flut")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u7x0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_utwlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kih0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lyrkg")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_miouo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_o3h8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1e7my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_miouo")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_c43xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_avx33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rxg2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xixlo")
+}],
+"loop": true,
+"name": &"TakeDamage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yoq75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ksbbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_glx4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_miouo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o3h8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1e7my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_arntx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lslt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ulo2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ulo2v")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_miouo"]
+radius = 133.09395
+
+[sub_resource type="GDScript" id="GDScript_qidb7"]
+script/source = "extends CollisionShape2D
+"
+
+[sub_resource type="Animation" id="Animation_1iu4k"]
+resource_name = "Hassan_Walk"
+length = 0.8
+loop_mode = 1
+step = 0.041
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09714453, 0.2, 0.30114806, 0.4, 0.5, 0.6, 0.70082843, 0.8007485),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Walk"]
+}
+
+[sub_resource type="Animation" id="Animation_m0x7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 334)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Hit"]
+}
+
+[sub_resource type="Animation" id="Animation_8flut"]
+resource_name = "Hassan_Idle"
+length = 0.3
+loop_mode = 1
+step = 0.041
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_u7x0b"]
+resource_name = "Hassan_Hit"
+length = 0.2
+step = 0.041
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Hit"]
+}
+
+[sub_resource type="Animation" id="Animation_utwlt"]
+resource_name = "Hassan_Jump"
+length = 0.3
+step = 0.041
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1619473, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -100), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.16059208, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.525, 0.525), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1619473, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 334), Vector2(0, 434), Vector2(0, 334)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Jump"]
+}
+
+[sub_resource type="Animation" id="Animation_kih0c"]
+resource_name = "Hassan_TakeDamage"
+length = 0.3
+step = 0.041
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.10028535, 0.2019259, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"TakeDamage"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5v66d"]
+_data = {
+&"Hassan_Hit": SubResource("Animation_u7x0b"),
+&"Hassan_Idle": SubResource("Animation_8flut"),
+&"Hassan_Jump": SubResource("Animation_utwlt"),
+&"Hassan_TakeDamage": SubResource("Animation_kih0c"),
+&"Hassan_Walk": SubResource("Animation_1iu4k"),
+&"RESET": SubResource("Animation_m0x7a")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lyrkg"]
+animation = &"Hassan_Hit"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c43xd"]
+animation = &"Hassan_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_avx33"]
+animation = &"Hassan_Jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rxg2u"]
+animation = &"Hassan_TakeDamage"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xixlo"]
+animation = &"Hassan_Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bfbt0"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wosd6"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hkrn1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wpo1r"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pqity"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_opqna"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_00okb"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6hr71"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y6y60"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vmcrb"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_teras"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8p516"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fvoow"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v5fqo"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yf17c"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_awd2i"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o2sks"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3rw25"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u4y2r"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tbv6f"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vp15a"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_fayk8"]
+states/Hassan_Hit/node = SubResource("AnimationNodeAnimation_lyrkg")
+states/Hassan_Hit/position = Vector2(478, -11)
+states/Hassan_Idle/node = SubResource("AnimationNodeAnimation_c43xd")
+states/Hassan_Idle/position = Vector2(270, 71)
+states/Hassan_Jump/node = SubResource("AnimationNodeAnimation_avx33")
+states/Hassan_Jump/position = Vector2(348, 202)
+states/Hassan_TakeDamage/node = SubResource("AnimationNodeAnimation_rxg2u")
+states/Hassan_TakeDamage/position = Vector2(586, 155)
+states/Hassan_Walk/node = SubResource("AnimationNodeAnimation_xixlo")
+states/Hassan_Walk/position = Vector2(427, 93)
+states/Start/position = Vector2(123, 83)
+transitions = ["Start", "Hassan_Idle", SubResource("AnimationNodeStateMachineTransition_bfbt0"), "Hassan_Idle", "Hassan_Walk", SubResource("AnimationNodeStateMachineTransition_wosd6"), "Hassan_Walk", "Hassan_Idle", SubResource("AnimationNodeStateMachineTransition_hkrn1"), "Hassan_Idle", "Hassan_Jump", SubResource("AnimationNodeStateMachineTransition_wpo1r"), "Hassan_Jump", "Hassan_Idle", SubResource("AnimationNodeStateMachineTransition_pqity"), "Hassan_Jump", "Hassan_Walk", SubResource("AnimationNodeStateMachineTransition_opqna"), "Hassan_Walk", "Hassan_Jump", SubResource("AnimationNodeStateMachineTransition_00okb"), "Hassan_TakeDamage", "Hassan_Idle", SubResource("AnimationNodeStateMachineTransition_6hr71"), "Hassan_Idle", "Hassan_TakeDamage", SubResource("AnimationNodeStateMachineTransition_y6y60"), "Hassan_TakeDamage", "Hassan_Jump", SubResource("AnimationNodeStateMachineTransition_vmcrb"), "Hassan_Jump", "Hassan_TakeDamage", SubResource("AnimationNodeStateMachineTransition_teras"), "Hassan_TakeDamage", "Hassan_Walk", SubResource("AnimationNodeStateMachineTransition_8p516"), "Hassan_Walk", "Hassan_TakeDamage", SubResource("AnimationNodeStateMachineTransition_fvoow"), "Hassan_Walk", "Hassan_Hit", SubResource("AnimationNodeStateMachineTransition_v5fqo"), "Hassan_Hit", "Hassan_Walk", SubResource("AnimationNodeStateMachineTransition_yf17c"), "Hassan_Hit", "Hassan_TakeDamage", SubResource("AnimationNodeStateMachineTransition_awd2i"), "Hassan_TakeDamage", "Hassan_Hit", SubResource("AnimationNodeStateMachineTransition_o2sks"), "Hassan_Hit", "Hassan_Jump", SubResource("AnimationNodeStateMachineTransition_3rw25"), "Hassan_Jump", "Hassan_Hit", SubResource("AnimationNodeStateMachineTransition_u4y2r"), "Hassan_Hit", "Hassan_Idle", SubResource("AnimationNodeStateMachineTransition_tbv6f"), "Hassan_Idle", "Hassan_Hit", SubResource("AnimationNodeStateMachineTransition_vp15a")]
+graph_offset = Vector2(13, -39)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 334)
+texture = ExtResource("1_70hv0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(19, 1)
+sprite_frames = SubResource("SpriteFrames_glx4g")
+animation = &"Hit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 209)
+shape = SubResource("CircleShape2D_miouo")
+script = SubResource("GDScript_qidb7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5v66d")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_fayk8")
+anim_player = NodePath("../AnimationPlayer")
