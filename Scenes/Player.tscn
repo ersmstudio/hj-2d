@@ -1,6 +1,5 @@
-[gd_scene load_steps=62 format=3 uid="uid://bk0nar2hl27os"]
+[gd_scene load_steps=29 format=3 uid="uid://boraq45xd0bub"]
 
-[ext_resource type="Script" uid="uid://c8r4nlctvmdb7" path="res://Scripts/player.gd" id="1_8flut"]
 [ext_resource type="Texture2D" uid="uid://yx3p4s62fvpq" path="res://Sprites/Hassan/Shadow.png" id="1_70hv0"]
 [ext_resource type="Texture2D" uid="uid://d4fxnajg5xccb" path="res://Sprites/Hassan/HassanJump01.png" id="1_miouo"]
 [ext_resource type="Texture2D" uid="uid://gd5vrplnsomt" path="res://Sprites/Hassan/HassanHit01.png" id="1_qidb7"]
@@ -26,34 +25,34 @@
 [ext_resource type="Texture2D" uid="uid://cg8efyrrkku2p" path="res://Sprites/Hassan/HassanTakeDamage03.png" id="13_rxg2u"]
 [ext_resource type="Texture2D" uid="uid://g5ujmklt2vug" path="res://Sprites/Hassan/HassanTakeDamage04.png" id="14_xixlo"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_glx4g"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8eeqe"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_qidb7")
+"texture": ExtResource("2_p1odr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_70hv0")
+"texture": ExtResource("3_0gysh")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_8flut")
+"texture": ExtResource("4_vfarp")
 }],
-"loop": true,
+"loop": false,
 "name": &"Hit",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_u7x0b")
+"texture": ExtResource("5_y6uwr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_utwlt")
+"texture": ExtResource("6_83xs0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_kih0c")
+"texture": ExtResource("7_ypfnu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_lyrkg")
+"texture": ExtResource("8_xuaoq")
 }],
 "loop": true,
 "name": &"Idle",
@@ -61,80 +60,85 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_miouo")
+"texture": ExtResource("9_wohnl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_o3h8g")
+"texture": ExtResource("10_36dho")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_1e7my")
+"texture": ExtResource("11_yh6i2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_miouo")
+"texture": ExtResource("9_wohnl")
 }],
-"loop": true,
+"loop": false,
 "name": &"Jump",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_c43xd")
+"texture": ExtResource("12_nv4vc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_avx33")
+"texture": ExtResource("13_8gxox")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_rxg2u")
+"texture": ExtResource("14_11gg7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_xixlo")
+"texture": ExtResource("15_qpa8y")
 }],
-"loop": true,
+"loop": false,
 "name": &"TakeDamage",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_yoq75")
+"texture": ExtResource("16_sbwqj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ksbbd")
+"texture": ExtResource("17_xwi16")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_glx4g")
+"texture": ExtResource("18_sweqm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_miouo")
+"texture": ExtResource("19_ph33w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_o3h8g")
+"texture": ExtResource("20_7ldla")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_1e7my")
+"texture": ExtResource("21_r7t2e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_arntx")
+"texture": ExtResource("22_nmr2m")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_lslt6")
+"texture": ExtResource("23_ax3m3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_ulo2v")
+"texture": ExtResource("24_3vlem")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_ulo2v")
+"texture": ExtResource("24_3vlem")
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_miouo"]
 radius = 133.09395
 
-[sub_resource type="Animation" id="Animation_u7x0b"]
-resource_name = "Hassan_Hit"
-length = 0.2
+[sub_resource type="GDScript" id="GDScript_qidb7"]
+script/source = "extends CollisionShape2D
+"
+
+[sub_resource type="Animation" id="Animation_1iu4k"]
+resource_name = "Hassan_Walk"
+length = 0.8
+loop_mode = 1
 step = 0.041
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -143,10 +147,10 @@ tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.09714453, 0.2, 0.30114806, 0.4, 0.5, 0.6, 0.70082843, 0.8007485),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -155,6 +159,69 @@ tracks/1/path = NodePath("AnimatedSprite2D:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Walk"]
+}
+
+[sub_resource type="Animation" id="Animation_m0x7a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 334)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -189,6 +256,35 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [&"Idle"]
+}
+
+[sub_resource type="Animation" id="Animation_u7x0b"]
+resource_name = "Hassan_Hit"
+length = 0.2
+step = 0.041
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Hit"]
 }
 
 [sub_resource type="Animation" id="Animation_utwlt"]
@@ -285,99 +381,6 @@ tracks/1/keys = {
 "values": [&"TakeDamage"]
 }
 
-[sub_resource type="Animation" id="Animation_1iu4k"]
-resource_name = "Hassan_Walk"
-length = 0.8
-loop_mode = 1
-step = 0.041
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.09714453, 0.2, 0.30114806, 0.4, 0.5, 0.6, 0.70082843, 0.8007485),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Walk"]
-}
-
-[sub_resource type="Animation" id="Animation_m0x7a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 334)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("AnimatedSprite2D:animation")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"Hit"]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5v66d"]
 _data = {
 &"Hassan_Hit": SubResource("Animation_u7x0b"),
@@ -462,26 +465,26 @@ transitions = ["Start", "Hassan_Idle", SubResource("AnimationNodeStateMachineTra
 graph_offset = Vector2(13, -39)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_8flut")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 334)
 texture = ExtResource("1_70hv0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(19, 1)
-sprite_frames = SubResource("SpriteFrames_glx4g")
-animation = &"Hit"
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_8eeqe")
+animation = &"Jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 209)
 shape = SubResource("CircleShape2D_miouo")
+script = SubResource("GDScript_qidb7")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_5v66d")
-}
+[node name="PlatformCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-6.5, 1)
+shape = SubResource("RectangleShape2D_p1odr")
+disabled = true
+debug_color = Color(0, 1.7285392, 1.7285392, 0)
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_fayk8")
-anim_player = NodePath("../AnimationPlayer")
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.575, 0.575)

@@ -1,12 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://bndtsi03x22h3"]
+[gd_scene load_steps=4 format=3 uid="uid://bndtsi03x22h3"]
 
-[ext_resource type="PackedScene" uid="uid://bk0nar2hl27os" path="res://Scenes/Player.tscn" id="1_obbhp"]
+[ext_resource type="PackedScene" uid="uid://boraq45xd0bub" path="res://Scenes/player.tscn" id="2_dts6m"]
+[ext_resource type="Texture2D" uid="uid://cj8apsiybs1j2" path="res://icon.svg" id="2_rqg7p"]
 
-[node name="Scene2D01" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqg7p"]
+size = Vector2(358, 129)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_obbhp")]
-position = Vector2(253, -25)
+[node name="Scene01" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(333, 59)
-zoom = Vector2(0.25, 0.25)
+[node name="Icon2" type="Sprite2D" parent="."]
+modulate = Color(18.892157, 0, 0, 1)
+position = Vector2(0, -301.565)
+scale = Vector2(13.015625, 5.086953)
+texture = ExtResource("2_rqg7p")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+scale = Vector2(37.30861, 0.39087677)
+texture = ExtResource("2_rqg7p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(13.302234, 0.39087677)
+shape = SubResource("RectangleShape2D_rqg7p")
+
+[node name="Player" parent="." instance=ExtResource("2_dts6m")]
+position = Vector2(0, -200)
