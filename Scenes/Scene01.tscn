@@ -9,8 +9,9 @@ size = Vector2(358, 129)
 [node name="Scene01" type="Node2D"]
 
 [node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(-40.5, -197)
-scale = Vector2(12.4609375, 3.1328125)
+modulate = Color(18.892157, 0, 0, 1)
+position = Vector2(0, -301.565)
+scale = Vector2(13.015625, 5.086953)
 texture = ExtResource("2_rqg7p")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
