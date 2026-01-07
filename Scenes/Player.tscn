@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://boraq45xd0bub"]
+[gd_scene load_steps=29 format=3 uid="uid://48js65xhq68l"]
 
 [ext_resource type="Texture2D" uid="uid://yx3p4s62fvpq" path="res://Sprites/Hassan/Shadow.png" id="1_2ijsl"]
 [ext_resource type="Script" uid="uid://bskuv64355i3w" path="res://Scripts/player.gd" id="1_p1odr"]
