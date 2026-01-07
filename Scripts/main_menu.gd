@@ -1,11 +1,22 @@
-extends Control
+extends CanvasLayer
 
+@export var Path: PackedScene
+@onready var QuitAnim: AnimationPlayer = $AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _on_play_pressed() -> void:
+	get_tree().change_scene_to_packed(Path) 
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _on_settings_pressed() -> void:
 	pass
+
+func _on_creators_pressed() -> void:
+	pass
+
+func _on_quit_pressed() -> void:
+	QuitAnim.play("OpenPanel")
+
+func _on_yes_pressed() -> void:
+	get_tree().quit()
+
+func _on_no_pressed() -> void:
+	QuitAnim.play("ClosePanel")

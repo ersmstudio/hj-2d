@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bys52s7i3hayh"]
+[gd_scene load_steps=11 format=3 uid="uid://bys52s7i3hayh"]
 
 [ext_resource type="Script" uid="uid://dqmebu0l0qaoo" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_1ehe0"]
-[ext_resource type="Texture2D" uid="uid://cbf6r1xaytbic" path="res://Sprites/Moataz/Moataz_Idle.png" id="3_1ehe0"]
+[ext_resource type="PackedScene" uid="uid://c86piyn1rsc1u" path="res://Scenes/scene_1.tscn" id="2_ce3w2"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
 bg_color = Color(0, 0, 0, 0.52156866)
 border_width_left = 5
 border_width_top = 5
@@ -15,7 +15,7 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
 bg_color = Color(0, 0, 0, 0.7411765)
 border_width_left = 9
 border_width_top = 9
@@ -27,19 +27,85 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
-bg_color = Color(0, 0, 0, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(0, 0, 0, 0.6784314)
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
-[node name="MainMenu" type="Control"]
+[sub_resource type="Animation" id="Animation_1ehe0"]
+resource_name = "OpenPanel"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459.5, -450), Vector2(459.5, 189.00012)]
+}
+
+[sub_resource type="Animation" id="Animation_ce3w2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(459.5, -450)]
+}
+
+[sub_resource type="Animation" id="Animation_n45e2"]
+resource_name = "ClosePanel"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459.5, 189.00009), Vector2(459.5, -460)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ce3w2"]
+_data = {
+&"ClosePanel": SubResource("Animation_n45e2"),
+&"OpenPanel": SubResource("Animation_1ehe0"),
+&"RESET": SubResource("Animation_ce3w2")
+}
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_28flt")
+Path = ExtResource("2_ce3w2")
+
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_28flt")
 
-[node name="Play" type="Button" parent="."]
+[node name="Play" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,20 +113,20 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -146.375
-offset_top = -81.0
+offset_top = -89.0
 offset_right = 146.375
-offset_bottom = -13.25
+offset_bottom = -21.25
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_1ehe0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_48xlc")
 text = "Play"
 
-[node name="Setting" type="Button" parent="."]
+[node name="Settings" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -68,20 +134,20 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -146.375
-offset_top = 1.0
+offset_top = -1.0
 offset_right = 146.375
-offset_bottom = 68.75
+offset_bottom = 66.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_1ehe0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
-text = "Setting"
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_48xlc")
+text = "Settings"
 
-[node name="Creators" type="Button" parent="."]
+[node name="Creators" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -89,20 +155,20 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -146.375
-offset_top = 83.125
+offset_top = 92.0
 offset_right = 146.375
-offset_bottom = 150.875
+offset_bottom = 159.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_1ehe0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_48xlc")
 text = "Creators"
 
-[node name="Quit" type="Button" parent="."]
+[node name="Quit" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -110,112 +176,125 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -146.375
-offset_top = 165.0
+offset_top = 186.0
 offset_right = 146.375
-offset_bottom = 232.75
+offset_bottom = 253.75
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_1ehe0")
 theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_48xlc")
 text = "Quit"
 
-[node name="Hassan" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 182.0
-offset_top = 116.0
-offset_right = 569.0
-offset_bottom = 225.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_48xlc")
-
-[node name="Label" type="Label" parent="Hassan"]
-layout_mode = 0
-offset_right = 72.0
-offset_bottom = 116.0
-theme_override_colors/font_color = Color(0.94509804, 0.7294118, 0.23529412, 1)
+[node name="Name" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -361.5
+offset_top = -266.0
+offset_right = 361.5
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_1ehe0")
-theme_override_font_sizes/font_size = 96
-text = "H"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 81
+text = "Hassan & Moataz"
 
-[node name="Label2" type="Label" parent="Hassan"]
-layout_mode = 0
-offset_left = 74.52
-offset_right = 146.52
-offset_bottom = 116.0
-theme_override_colors/font_color = Color(0.80784315, 0.64705884, 0.46666667, 1)
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.5
+offset_top = -810.0
+offset_right = 180.5
+offset_bottom = -468.00024
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ehe0")
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -154.5
+offset_top = 28.00003
+offset_right = 167.5
+offset_bottom = 184.00003
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_1ehe0")
-theme_override_font_sizes/font_size = 96
-text = "a"
+theme_override_font_sizes/font_size = 41
+text = "Are You Sure
+You Want Exit?
+"
 horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="Hassan"]
-layout_mode = 0
-offset_left = 144.53
-offset_right = 216.52985
-offset_bottom = 116.0
-theme_override_colors/font_color = Color(0.32156864, 0.49019608, 0.1764706, 1)
+[node name="Yes" type="Button" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = 67.99994
+offset_right = -19.5
+offset_bottom = 135.74994
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_1ehe0")
-theme_override_font_sizes/font_size = 96
-text = "s"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_48xlc")
+text = "Yes"
 
-[node name="Label4" type="Label" parent="Hassan"]
-layout_mode = 0
-offset_left = 194.315
-offset_right = 266.31506
-offset_bottom = 116.0
-theme_override_colors/font_color = Color(0.32156864, 0.49019608, 0.1764706, 1)
+[node name="No" type="Button" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.5
+offset_top = 66.99994
+offset_right = 161.5
+offset_bottom = 134.74994
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_1ehe0")
-theme_override_font_sizes/font_size = 96
-text = "s"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/focus = SubResource("StyleBoxFlat_48xlc")
+text = "No"
 
-[node name="Label5" type="Label" parent="Hassan"]
-layout_mode = 0
-offset_left = 251.99998
-offset_right = 323.99994
-offset_bottom = 116.0
-theme_override_colors/font_color = Color(0.35686275, 0.23137255, 0.12941177, 1)
-theme_override_fonts/font = ExtResource("2_1ehe0")
-theme_override_font_sizes/font_size = 96
-text = "a"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ce3w2")
+}
 
-[node name="Label6" type="Label" parent="Hassan"]
-layout_mode = 0
-offset_left = 317.06
-offset_right = 389.05997
-offset_bottom = 116.0
-theme_override_colors/font_color = Color(0.46666667, 0.5176471, 0.45490196, 1)
-theme_override_fonts/font = ExtResource("2_1ehe0")
-theme_override_font_sizes/font_size = 96
-text = "n"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
 
-[node name="Label7" type="Label" parent="Hassan"]
-layout_mode = 0
-offset_left = 399.0
-offset_top = 10.0
-offset_right = 481.0
-offset_bottom = 126.0
-theme_override_colors/font_color = Color(0.90588236, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_1ehe0")
-theme_override_font_sizes/font_size = 71
-text = "&"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MoatazIdle" type="Sprite2D" parent="."]
-position = Vector2(1018.5, 379)
-scale = Vector2(7.03125, 5.5625)
-texture = ExtResource("3_1ehe0")
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/Creators" to="." method="_on_creators_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/Panel/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Control/Panel/No" to="." method="_on_no_pressed"]
