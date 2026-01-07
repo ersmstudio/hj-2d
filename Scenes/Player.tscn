@@ -136,17 +136,18 @@ radius = 39.012817
 size = Vector2(103, 206)
 
 [node name="Player" type="CharacterBody2D"]
+rotation = 0.013832364
 script = ExtResource("1_p1odr")
 
 [node name="Shadow" type="Sprite2D" parent="."]
-position = Vector2(-6, 103)
+position = Vector2(-5.95722, 106.09255)
 scale = Vector2(0.45591158, 0.45591158)
 texture = ExtResource("1_2ijsl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_8eeqe")
-animation = &"Jump"
+animation = &"Idle"
 
 [node name="TopDownCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 69)

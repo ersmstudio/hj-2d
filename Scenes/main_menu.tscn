@@ -1,0 +1,215 @@
+[gd_scene load_steps=6 format=3 uid="uid://bys52s7i3hayh"]
+
+[ext_resource type="Script" uid="uid://dqmebu0l0qaoo" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_1ehe0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(0, 0, 0, 0.52156866)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0, 0, 0, 0.7411765)
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_blend = true
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0, 0, 0, 0)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.375
+offset_top = -81.0
+offset_right = 146.375
+offset_bottom = -13.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+text = "Play"
+
+[node name="Setting" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.375
+offset_top = 1.0
+offset_right = 146.375
+offset_bottom = 68.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+text = "Setting"
+
+[node name="Creators" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.375
+offset_top = 83.125
+offset_right = 146.375
+offset_bottom = 150.875
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+text = "Creators"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.375
+offset_top = 165.0
+offset_right = 146.375
+offset_bottom = 232.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ce3w2")
+text = "Quit"
+
+[node name="Hassan" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 116.0
+offset_right = 569.0
+offset_bottom = 225.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_48xlc")
+
+[node name="Label" type="Label" parent="Hassan"]
+layout_mode = 0
+offset_right = 72.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.94509804, 0.7294118, 0.23529412, 1)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 96
+text = "H"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Hassan"]
+layout_mode = 0
+offset_left = 74.52
+offset_right = 146.52
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.80784315, 0.64705884, 0.46666667, 1)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 96
+text = "a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Hassan"]
+layout_mode = 0
+offset_left = 144.53
+offset_right = 216.52985
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.32156864, 0.49019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 96
+text = "s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Hassan"]
+layout_mode = 0
+offset_left = 194.315
+offset_right = 266.31506
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.32156864, 0.49019608, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 96
+text = "s"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Hassan"]
+layout_mode = 0
+offset_left = 251.99998
+offset_right = 323.99994
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.35686275, 0.23137255, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 96
+text = "a"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Hassan"]
+layout_mode = 0
+offset_left = 317.06
+offset_right = 389.05997
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.46666667, 0.5176471, 0.45490196, 1)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 96
+text = "n"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Hassan"]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 10.0
+offset_right = 481.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0.90588236, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1ehe0")
+theme_override_font_sizes/font_size = 71
+text = "&"
+horizontal_alignment = 1
+vertical_alignment = 1
