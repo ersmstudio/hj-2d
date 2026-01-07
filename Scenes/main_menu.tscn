@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bys52s7i3hayh"]
+[gd_scene load_steps=7 format=3 uid="uid://bys52s7i3hayh"]
 
 [ext_resource type="Script" uid="uid://dqmebu0l0qaoo" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://cbf6r1xaytbic" path="res://Sprites/Moataz/Moataz_Idle.png" id="3_1ehe0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
 bg_color = Color(0, 0, 0, 0.52156866)
@@ -213,3 +214,8 @@ theme_override_font_sizes/font_size = 71
 text = "&"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MoatazIdle" type="Sprite2D" parent="."]
+position = Vector2(1018.5, 379)
+scale = Vector2(7.03125, 5.5625)
+texture = ExtResource("3_1ehe0")
