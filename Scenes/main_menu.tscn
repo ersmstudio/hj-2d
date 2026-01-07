@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bys52s7i3hayh"]
+[gd_scene load_steps=12 format=3 uid="uid://bys52s7i3hayh"]
 
 [ext_resource type="Script" uid="uid://dqmebu0l0qaoo" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_1ehe0"]
 [ext_resource type="PackedScene" uid="uid://c86piyn1rsc1u" path="res://Scenes/scene_1.tscn" id="2_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://brgvrp50fu0rk" path="res://Sprites/Background/Yellow.png" id="3_ce3w2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
 bg_color = Color(0, 0, 0, 0.52156866)
@@ -96,6 +97,15 @@ _data = {
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_28flt")
 Path = ExtResource("2_ce3w2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ce3w2")
+stretch_mode = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
