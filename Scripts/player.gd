@@ -53,7 +53,6 @@ func platform_move(delta: float) -> void:
 
 	if not is_on_floor():
 		velocity.y += get_gravity().y * delta
-		PlayerAnim.play("Jump")
 	else:
 		if Input.is_action_just_pressed("Jump"):
 			velocity.y = Jump
