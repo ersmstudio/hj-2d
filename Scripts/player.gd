@@ -17,15 +17,7 @@ var last_dir := Vector2.DOWN
 var attack_timer := 0.0
 
 func _ready() -> void:
-	if Platform:
-		PlayerAnim.visible = true
-		WUAnim.visible = false
-		PlayerAnim.play("Idle")
-	else:
-		PlayerAnim.visible = false
-		WUAnim.visible = true
-		WUAnim.play("IdleUp")
-
+	PlayerAnim.play("Idle")
 func _physics_process(delta: float) -> void:
 	TDCollision.disabled = Platform
 	WUCollision.disabled = Platform
