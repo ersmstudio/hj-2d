@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqmebu0l0qaoo" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_1ehe0"]
-[ext_resource type="PackedScene" uid="uid://c86piyn1rsc1u" path="res://Scenes/scene_1.tscn" id="2_ce3w2"]
+[ext_resource type="PackedScene" uid="uid://dtxbblc2k48tm" path="res://Scenes/loading_screen.tscn" id="2_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://brgvrp50fu0rk" path="res://Sprites/Background/Yellow.png" id="3_ce3w2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
@@ -40,6 +40,22 @@ corner_radius_top_right = 40
 corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
+[sub_resource type="Animation" id="Animation_n45e2"]
+resource_name = "ClosePanel"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(459.5, 189.00009), Vector2(459.5, -460)]
+}
+
 [sub_resource type="Animation" id="Animation_1ehe0"]
 resource_name = "OpenPanel"
 length = 0.3
@@ -69,22 +85,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(459.5, -450)]
-}
-
-[sub_resource type="Animation" id="Animation_n45e2"]
-resource_name = "ClosePanel"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Panel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(459.5, 189.00009), Vector2(459.5, -460)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ce3w2"]
