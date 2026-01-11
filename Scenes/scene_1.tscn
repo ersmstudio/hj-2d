@@ -9,7 +9,7 @@
 size = Vector2(128, 129)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jpfo"]
-size = Vector2(314.48218, 756.8755)
+size = Vector2(314.48218, 1045.3473)
 
 [node name="Scene 1" type="Node2D"]
 
@@ -17,10 +17,10 @@ size = Vector2(314.48218, 756.8755)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -214.0
-offset_top = -165.0
-offset_right = 213.0
-offset_bottom = 2.0
+offset_left = -225.0
+offset_top = -169.0
+offset_right = 223.0
+offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_0jpfo")
@@ -32,30 +32,30 @@ collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 modulate = Color(18.285519, 0.0031542343, 0.0009856982, 1)
-position = Vector2(0, 172.89267)
+position = Vector2(0, 363.2724)
 scale = Vector2(-41.13431, 2.7740011)
 texture = ExtResource("1_23sq3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(1, 173.39267)
+position = Vector2(1, 363.7724)
 scale = Vector2(-41.13431, 2.7740011)
 shape = SubResource("RectangleShape2D_n8be1")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-2425.113, -392.36804)
+position = Vector2(-2425.113, -315.75174)
 shape = SubResource("RectangleShape2D_0jpfo")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2427.9087, -392.36807)
+position = Vector2(2427.9087, -312.8497)
 shape = SubResource("RectangleShape2D_0jpfo")
 
 [node name="Player" parent="." instance=ExtResource("2_n8be1")]
-position = Vector2(-156, -31)
+position = Vector2(-156, 15)
 Platform = true
 
 [node name="Player2" parent="." instance=ExtResource("4_0jpfo")]
-position = Vector2(140, -36)
+position = Vector2(140, 12)
 Platform = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
