@@ -1,12 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://dxoi5f65nwcf3"]
+[gd_scene load_steps=8 format=3 uid="uid://dxoi5f65nwcf3"]
 
 [ext_resource type="Script" uid="uid://bam0qhyk71i38" path="res://Scripts/intro.gd" id="1_alxvg"]
-[ext_resource type="Texture2D" uid="uid://ce6jmve4uxy1b" path="res://Sprites/Logo Ersm Studio Circle.jpeg" id="1_b226h"]
-[ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_duh1u"]
 [ext_resource type="PackedScene" uid="uid://bys52s7i3hayh" path="res://Scenes/main_menu.tscn" id="2_geirw"]
+[ext_resource type="Texture2D" uid="uid://dvh3thikaya27" path="res://UI/Logo01.png" id="3_alxvg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mecp6"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_hwjxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LogoErsmStudioCircle:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_geirw"]
 resource_name = "introP"
@@ -22,45 +36,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 4, 5, 6, 7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_hwjxs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("LogoErsmStudioCircle:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rsiac"]
@@ -93,32 +68,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_mecp6")
 [node name="LogoErsmStudioCircle" type="Sprite2D" parent="Control/Panel"]
 modulate = Color(1, 1, 1, 0)
 texture_filter = 1
-position = Vector2(620, 340)
-scale = Vector2(0.1666016, 0.1666016)
-texture = ExtResource("1_b226h")
-
-[node name="Label" type="Label" parent="Control/Panel"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -175.5
-offset_top = 93.0
-offset_right = 175.5
-offset_bottom = 189.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_duh1u")
-theme_override_font_sizes/font_size = 56
-text = "Ersm Studio"
-horizontal_alignment = 1
-vertical_alignment = 1
+position = Vector2(620, 348.5)
+scale = Vector2(0.08862093, 0.08862093)
+texture = ExtResource("3_alxvg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Panel"]
 libraries = {

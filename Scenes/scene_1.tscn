@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c86piyn1rsc1u"]
+[gd_scene load_steps=5 format=3 uid="uid://c86piyn1rsc1u"]
 
 [ext_resource type="Texture2D" uid="uid://cj8apsiybs1j2" path="res://icon.svg" id="1_23sq3"]
+[ext_resource type="Texture2D" uid="uid://dvh3thikaya27" path="res://UI/Logo01.png" id="1_n8be1"]
 [ext_resource type="PackedScene" uid="uid://48js65xhq68l" path="res://Scenes/player.tscn" id="2_n8be1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8be1"]
@@ -8,14 +9,15 @@ size = Vector2(128, 129)
 
 [node name="Scene 1" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Logo01" type="Sprite2D" parent="."]
 modulate = Color(18.892157, 0, 0, 1)
-self_modulate = Color(18.892157, 0, 0, 1)
-position = Vector2(0, -233.355)
-scale = Vector2(7.679687, 3.8589962)
-texture = ExtResource("1_23sq3")
+position = Vector2(0, -48.345)
+scale = Vector2(0.045320287, 0.045320287)
+texture = ExtResource("1_n8be1")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+scale = Vector2(-0.093805015, 0.21535908)
+collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
@@ -29,5 +31,5 @@ scale = Vector2(-48.93841, 0.2421341)
 shape = SubResource("RectangleShape2D_n8be1")
 
 [node name="Player" parent="." instance=ExtResource("2_n8be1")]
-position = Vector2(0, -132.405)
+position = Vector2(0, -223)
 Platform = true

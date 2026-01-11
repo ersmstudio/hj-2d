@@ -27,6 +27,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="HJ2D"
 
+[global_group]
+
+Player="This Is Player"
+
 [input]
 
 Up={
