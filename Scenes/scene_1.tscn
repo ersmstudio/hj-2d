@@ -1,35 +1,63 @@
-[gd_scene load_steps=5 format=3 uid="uid://c86piyn1rsc1u"]
+[gd_scene load_steps=7 format=3 uid="uid://c86piyn1rsc1u"]
 
+[ext_resource type="Texture2D" uid="uid://beiu0m3p366ka" path="res://Sprites/Background/Brown.png" id="1_0jpfo"]
 [ext_resource type="Texture2D" uid="uid://cj8apsiybs1j2" path="res://icon.svg" id="1_23sq3"]
-[ext_resource type="Texture2D" uid="uid://dvh3thikaya27" path="res://UI/Logo01.png" id="1_n8be1"]
-[ext_resource type="PackedScene" uid="uid://48js65xhq68l" path="res://Scenes/player.tscn" id="2_n8be1"]
+[ext_resource type="PackedScene" uid="uid://48js65xhq68l" path="res://Scenes/Players/player.tscn" id="2_n8be1"]
+[ext_resource type="PackedScene" uid="uid://cdynjffhqkm07" path="res://Scenes/Players/player2.tscn" id="4_0jpfo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8be1"]
 size = Vector2(128, 129)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jpfo"]
+size = Vector2(314.48218, 756.8755)
+
 [node name="Scene 1" type="Node2D"]
 
-[node name="Logo01" type="Sprite2D" parent="."]
-modulate = Color(18.892157, 0, 0, 1)
-position = Vector2(0, -48.345)
-scale = Vector2(0.045320287, 0.045320287)
-texture = ExtResource("1_n8be1")
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -214.0
+offset_top = -165.0
+offset_right = 213.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0jpfo")
+stretch_mode = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 scale = Vector2(-0.093805015, 0.21535908)
 collision_mask = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-scale = Vector2(-48.93841, 0.2421341)
+modulate = Color(18.285519, 0.0031542343, 0.0009856982, 1)
+position = Vector2(0, 172.89267)
+scale = Vector2(-41.13431, 2.7740011)
 texture = ExtResource("1_23sq3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 modulate = Color(18.892157, 18.892157, 18.892157, 1)
-position = Vector2(1, 0.5)
-scale = Vector2(-48.93841, 0.2421341)
+position = Vector2(1, 173.39267)
+scale = Vector2(-41.13431, 2.7740011)
 shape = SubResource("RectangleShape2D_n8be1")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-2425.113, -392.36804)
+shape = SubResource("RectangleShape2D_0jpfo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2427.9087, -392.36807)
+shape = SubResource("RectangleShape2D_0jpfo")
+
 [node name="Player" parent="." instance=ExtResource("2_n8be1")]
-position = Vector2(0, -223)
+position = Vector2(-156, -31)
 Platform = true
+
+[node name="Player2" parent="." instance=ExtResource("4_0jpfo")]
+position = Vector2(140, -36)
+Platform = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -45)
+zoom = Vector2(3.005, 3.005)

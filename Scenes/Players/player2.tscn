@@ -1,0 +1,161 @@
+[gd_scene load_steps=18 format=3 uid="uid://cdynjffhqkm07"]
+
+[ext_resource type="Script" uid="uid://swjbvbt7f57h" path="res://Scripts/player_2.gd" id="1_tgwsj"]
+[ext_resource type="Texture2D" uid="uid://yx3p4s62fvpq" path="res://Sprites/Hassan/Shadow.png" id="2_jcvir"]
+[ext_resource type="Texture2D" uid="uid://cbf6r1xaytbic" path="res://Sprites/Moataz/Moataz_Idle.png" id="3_tgwsj"]
+[ext_resource type="Texture2D" uid="uid://d0i0xevmll7n4" path="res://Sprites/Moataz/project 1/الوقوف/الوقوف ٠١.png" id="4_vo0eg"]
+[ext_resource type="Texture2D" uid="uid://d8b3bwnik4tn" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠١.png" id="5_8tfxp"]
+[ext_resource type="Texture2D" uid="uid://dr0s3j23xl0h1" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠٢.png" id="6_skyrc"]
+[ext_resource type="Texture2D" uid="uid://ba6vpl2o5687k" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠٣.png" id="7_cumcg"]
+[ext_resource type="Texture2D" uid="uid://chmswwdbj5qj7" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠٤.png" id="8_rjy01"]
+[ext_resource type="Texture2D" uid="uid://btjn15k1g2j67" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠٥.png" id="9_jfs6p"]
+[ext_resource type="Texture2D" uid="uid://6f1csf1wty5r" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠٦.png" id="10_5yk7a"]
+[ext_resource type="Texture2D" uid="uid://dunwds6vbnaw5" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠٧.png" id="11_o207t"]
+[ext_resource type="Texture2D" uid="uid://cl7fwws4c2tbx" path="res://Sprites/Moataz/project 1/المشى/يمشي ٠٨.png" id="12_xok70"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qffc4"]
+atlas = ExtResource("3_tgwsj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vopnt"]
+atlas = ExtResource("4_vo0eg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6uwr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qffc4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vopnt")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8tfxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_skyrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cumcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rjy01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jfs6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5yk7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_o207t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xok70")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8tfxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_skyrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cumcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rjy01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jfs6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5yk7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_o207t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xok70")
+}],
+"loop": true,
+"name": &"WalkDown",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8tfxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_skyrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cumcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rjy01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jfs6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5yk7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_o207t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xok70")
+}],
+"loop": true,
+"name": &"WalkUp",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_83xs0"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypfnu"]
+size = Vector2(11.98502, 30.024794)
+
+[node name="Player" type="CharacterBody2D" groups=["Player2"]]
+rotation = 0.013832364
+script = ExtResource("1_tgwsj")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0.20747884, 14.998565)
+scale = Vector2(0.07990246, 0.13119489)
+texture = ExtResource("2_jcvir")
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.0075562, -2.8532238)
+scale = Vector2(1.0703307, 1.1783264)
+sprite_frames = SubResource("SpriteFrames_y6uwr")
+animation = &"Idle"
+
+[node name="TDCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0.16598308, 11.998853)
+shape = SubResource("CircleShape2D_83xs0")
+disabled = true
+debug_color = Color(0, 0.93082035, 0.43268114, 0.41960785)
+
+[node name="PFCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0.020747688, 0.9860726)
+shape = SubResource("RectangleShape2D_ypfnu")
+disabled = true
+debug_color = Color(0, 0.88235295, 0.9019608, 0.21568628)

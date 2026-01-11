@@ -19,7 +19,7 @@ func _physics_process(delta):
 			velocity += get_gravity() * delta
 
 		# Horizontal movement
-		var dir := Input.get_axis("Left", "Right")
+		var dir := Input.get_axis("Left P2", "Right P2")
 		velocity.x = dir * Speed
 
 		# Flip
@@ -27,7 +27,7 @@ func _physics_process(delta):
 			PlayerAnim.flip_h = dir < 0
 
 		# Jump
-		if Input.is_action_just_pressed("Jump") and is_on_floor():
+		if Input.is_action_just_pressed("Jump P2") and is_on_floor():
 			velocity.y = Jump
 
 		# Animations (Platform)
@@ -47,8 +47,8 @@ func _physics_process(delta):
 		TopDownColl.disabled = false
 
 		var dir := Vector2(
-			Input.get_axis("Left", "Right"),
-			Input.get_axis("Up", "Down")
+				Input.get_axis("Left P2", "Right P2"),
+			Input.get_axis("Up P2", "Down P2")
 		)
 
 		if dir != Vector2.ZERO:
