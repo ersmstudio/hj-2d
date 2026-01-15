@@ -34,10 +34,10 @@ func _physics_process(delta):
 			PlayerAnim.flip_h = dir < 0
 
 		# Jump
-		if Input.is_action_just_pressed("Jump") and is_on_floor():
+		if Input.is_action_just_pressed("Jump P2") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 		
-		elif Input.is_action_pressed("Jump") and not is_on_floor() and velocity.y < 0:
+		elif Input.is_action_pressed("Jump P2") and not is_on_floor() and velocity.y < 0:
 			velocity.y += HOLD_JUMP_FORCE * delta
 
 		# Animations (Platform)
