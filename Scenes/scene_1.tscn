@@ -57,7 +57,9 @@ Platform = true
 [node name="Player2" parent="." instance=ExtResource("4_0jpfo")]
 position = Vector2(140, 12)
 Platform = true
+Camera = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -45)
+enabled = false
 zoom = Vector2(3.005, 3.005)

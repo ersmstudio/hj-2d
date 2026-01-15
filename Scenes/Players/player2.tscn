@@ -133,7 +133,7 @@ radius = 5.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypfnu"]
 size = Vector2(11.98502, 30.024794)
 
-[node name="Player" type="CharacterBody2D" groups=["Player2"]]
+[node name="Player2" type="CharacterBody2D" groups=["Player2"]]
 rotation = 0.013832364
 script = ExtResource("1_tgwsj")
 
@@ -159,3 +159,6 @@ position = Vector2(0.020747688, 0.9860726)
 shape = SubResource("RectangleShape2D_ypfnu")
 disabled = true
 debug_color = Color(0, 0.88235295, 0.9019608, 0.21568628)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.5, 3.5)

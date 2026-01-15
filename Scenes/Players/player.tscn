@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://yx3p4s62fvpq" path="res://Sprites/Hassan/Shadow.png" id="2_ppdxs"]
 [ext_resource type="Texture2D" uid="uid://fhpvajp6lktn" path="res://Sprites/HassanAnimation.png" id="3_22fdy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qn36"]
 atlas = ExtResource("3_22fdy")
-region = Rect2(288, 0, 32, 32)
+region = Rect2(544, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppdxs"]
 atlas = ExtResource("3_22fdy")
-region = Rect2(352, 0, 32, 32)
+region = Rect2(704, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
 atlas = ExtResource("3_22fdy")
@@ -112,7 +112,7 @@ region = Rect2(224, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cvnsp")
+"texture": SubResource("AtlasTexture_8qn36")
 }],
 "loop": true,
 "name": &"Idle",
@@ -120,7 +120,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6t5aa")
+"texture": SubResource("AtlasTexture_ppdxs")
 }],
 "loop": false,
 "name": &"Jump",
@@ -244,3 +244,6 @@ position = Vector2(0.020747688, 0.9860726)
 shape = SubResource("RectangleShape2D_ypfnu")
 disabled = true
 debug_color = Color(0, 0.88235295, 0.9019608, 0.21568628)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.5, 3.5)
