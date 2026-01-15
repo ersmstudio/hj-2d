@@ -15,32 +15,28 @@ func _physics_process(delta):
 		$Camera2D.enabled = true
 	else:
 		$Camera2D.enabled = false
-	
+		
+# ========= PLATFORM MODE =========
+
 	if Platform:
-		# ========= PLATFORM MODE =========
 		PlatformColl.disabled = false
 		TopDownColl.disabled = true
 
-		# Gravity
 		if not is_on_floor():
 			velocity += get_gravity() * delta
 
-		# Horizontal movement
 		var dir := Input.get_axis("Left P2", "Right P2")
 		velocity.x = dir * Speed
 
-		# Flip
 		if dir != 0:
 			PlayerAnim.flip_h = dir < 0
 
-		# Jump
 		if Input.is_action_just_pressed("Jump P2") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 		
 		elif Input.is_action_pressed("Jump P2") and not is_on_floor() and velocity.y < 0:
 			velocity.y += HOLD_JUMP_FORCE * delta
 
-		# Animations (Platform)
 		if not is_on_floor():
 			PlayerAnim.play("Jump")
 		else:
@@ -51,8 +47,9 @@ func _physics_process(delta):
 
 		move_and_slide()
 
+# ========= TOP DOWN MODE =========
+
 	else:
-		# ========= TOP DOWN MODE =========
 		PlatformColl.disabled = true
 		TopDownColl.disabled = false
 
@@ -64,7 +61,6 @@ func _physics_process(delta):
 		if dir != Vector2.ZERO:
 			velocity = dir.normalized() * Speed
 
-			# Animations (TopDown)
 			if abs(dir.x) > abs(dir.y):
 				PlayerAnim.play("Walk")
 				PlayerAnim.flip_h = dir.x < 0
