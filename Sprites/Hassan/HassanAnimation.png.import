@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8sj6t3oagth1"
-path="res://.godot/imported/HassanIdle03.png-107dce8dcb4a43ce627899def798321a.ctex"
+uid="uid://f646lgf647sf"
+path="res://.godot/imported/HassanAnimation.png-bff4940754c75e8e6aa79e2aa29ab578.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Hassan/HassanIdle03.png"
-dest_files=["res://.godot/imported/HassanIdle03.png-107dce8dcb4a43ce627899def798321a.ctex"]
+source_file="res://Sprites/Hassan/HassanAnimation.png"
+dest_files=["res://.godot/imported/HassanAnimation.png-bff4940754c75e8e6aa79e2aa29ab578.ctex"]
 
 [params]
 
