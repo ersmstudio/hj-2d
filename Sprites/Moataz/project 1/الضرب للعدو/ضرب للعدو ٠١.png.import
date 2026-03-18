@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d07mxmoaenl28"
-path="res://.godot/imported/الضرب للاعب ٠٤.png-c97700d3b4b3ca0895b4ec667d70f90f.ctex"
+uid="uid://cqgxii8exohm0"
+path="res://.godot/imported/ضرب للعدو ٠١.png-3b3c6df8172a56f575a7f13002253773.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Moataz/project 1/الصرب للاعب/الضرب للاعب ٠٤.png"
-dest_files=["res://.godot/imported/الضرب للاعب ٠٤.png-c97700d3b4b3ca0895b4ec667d70f90f.ctex"]
+source_file="res://Sprites/Moataz/project 1/الضرب للعدو/ضرب للعدو ٠١.png"
+dest_files=["res://.godot/imported/ضرب للعدو ٠١.png-3b3c6df8172a56f575a7f13002253773.ctex"]
 
 [params]
 

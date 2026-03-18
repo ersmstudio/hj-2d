@@ -138,8 +138,8 @@ rotation = 0.013832364
 script = ExtResource("1_tgwsj")
 
 [node name="Shadow" type="Sprite2D" parent="."]
-position = Vector2(0.20747884, 14.998565)
-scale = Vector2(0.07990246, 0.13119489)
+position = Vector2(0.63673687, 13.992531)
+scale = Vector2(0.03528277, 0.13119489)
 texture = ExtResource("2_jcvir")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
@@ -149,16 +149,17 @@ sprite_frames = SubResource("SpriteFrames_y6uwr")
 animation = &"Idle"
 
 [node name="TDCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0.16598308, 11.998853)
+position = Vector2(0.6090727, 11.992723)
 shape = SubResource("CircleShape2D_83xs0")
 disabled = true
 debug_color = Color(0, 0.93082035, 0.43268114, 0.41960785)
 
 [node name="PFCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0.020747688, 0.9860726)
+position = Vector2(0.46383762, 0.9799432)
 shape = SubResource("RectangleShape2D_ypfnu")
 disabled = true
 debug_color = Color(0, 0.88235295, 0.9019608, 0.21568628)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0.44308996, -0.0061293766)
 zoom = Vector2(3.5, 3.5)
