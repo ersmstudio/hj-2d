@@ -46,10 +46,10 @@ func _physics_process(delta):
 
 		# Animations (Platform)
 		if not is_on_floor():
-			PlayerAnim.play("Jump")
+			PlayerAnim.play("JumpR&L")
 		else:
 			if dir == 0:
-				PlayerAnim.play("Idle")
+				PlayerAnim.play("IdleR&L")
 			else:
 				PlayerAnim.play("Walk")
 

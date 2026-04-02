@@ -1,4 +1,4 @@
-[gd_scene load_steps=284 format=3 uid="uid://48js65xhq68l"]
+[gd_scene load_steps=278 format=3 uid="uid://48js65xhq68l"]
 
 [ext_resource type="Script" uid="uid://bskuv64355i3w" path="res://Scripts/player.gd" id="1_8qn36"]
 [ext_resource type="Texture2D" uid="uid://yx3p4s62fvpq" path="res://Sprites/Hassan/Shadow.png" id="2_ppdxs"]
@@ -337,33 +337,9 @@ region = Rect2(352, 64, 32, 32)
 atlas = ExtResource("3_8qn36")
 region = Rect2(384, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lvf6g"]
-atlas = ExtResource("3_8qn36")
-region = Rect2(384, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_umebe"]
-atlas = ExtResource("3_8qn36")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_biyjr"]
-atlas = ExtResource("3_8qn36")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0k86a"]
-atlas = ExtResource("3_8qn36")
-region = Rect2(64, 64, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_hgfk6"]
 atlas = ExtResource("3_8qn36")
 region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ex7pp"]
-atlas = ExtResource("3_8qn36")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_74mj1"]
-atlas = ExtResource("3_8qn36")
-region = Rect2(160, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtgec"]
 atlas = ExtResource("3_8qn36")
@@ -1407,25 +1383,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lvf6g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_umebe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_biyjr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0k86a")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_hgfk6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ex7pp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_74mj1")
 }],
 "loop": true,
 "name": &"JumpR&L",
@@ -2047,6 +2005,8 @@ texture = ExtResource("2_ppdxs")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_37lpg")
+animation = &"JumpR&L"
+frame_progress = 1.0
 
 [node name="TDCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0.16598308, 11.998853)
