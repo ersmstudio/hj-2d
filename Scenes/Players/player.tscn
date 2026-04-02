@@ -1109,9 +1109,7 @@ texture = ExtResource("2_ppdxs")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_y6uwr")
-animation = &"TakeDamageUP"
-frame = 3
-frame_progress = 0.0042811166
+animation = &"DashDown"
 
 [node name="TDCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0.16598308, 11.998853)
