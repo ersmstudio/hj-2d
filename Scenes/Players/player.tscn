@@ -1,4 +1,4 @@
-[gd_scene load_steps=278 format=3 uid="uid://48js65xhq68l"]
+[gd_scene load_steps=283 format=3 uid="uid://48js65xhq68l"]
 
 [ext_resource type="Script" uid="uid://bskuv64355i3w" path="res://Scripts/player.gd" id="1_8qn36"]
 [ext_resource type="Texture2D" uid="uid://yx3p4s62fvpq" path="res://Sprites/Hassan/Shadow.png" id="2_ppdxs"]
@@ -140,10 +140,6 @@ region = Rect2(224, 288, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ymghk"]
 atlas = ExtResource("3_8qn36")
 region = Rect2(256, 288, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sm8te"]
-atlas = ExtResource("3_8qn36")
-region = Rect2(288, 288, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_41tkc"]
 atlas = ExtResource("3_8qn36")
@@ -337,9 +333,33 @@ region = Rect2(352, 64, 32, 32)
 atlas = ExtResource("3_8qn36")
 region = Rect2(384, 64, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hgfk6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppdxs"]
+atlas = ExtResource("3_8qn36")
+region = Rect2(384, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvf6g"]
+atlas = ExtResource("3_8qn36")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umebe"]
+atlas = ExtResource("3_8qn36")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biyjr"]
+atlas = ExtResource("3_8qn36")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k86a"]
 atlas = ExtResource("3_8qn36")
 region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgfk6"]
+atlas = ExtResource("3_8qn36")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex7pp"]
+atlas = ExtResource("3_8qn36")
+region = Rect2(160, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mtgec"]
 atlas = ExtResource("3_8qn36")
@@ -1114,7 +1134,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"DashDown",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1128,7 +1148,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"DashR&L",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1157,7 +1177,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"DashUp",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1204,9 +1224,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ymghk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sm8te")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_41tkc")
@@ -1383,7 +1400,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ppdxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvf6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umebe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_biyjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k86a")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_hgfk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ex7pp")
 }],
 "loop": true,
 "name": &"JumpR&L",
@@ -1511,7 +1546,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"WalkDown",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1540,7 +1575,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"WalkR&L",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1572,7 +1607,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"WalkUp",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1992,11 +2027,12 @@ animations = [{
 radius = 5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypfnu"]
-size = Vector2(11.98502, 30.024794)
+size = Vector2(11.98502, 29.955635)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 rotation = 0.013832364
 script = ExtResource("1_8qn36")
+Speed = 150.0
 
 [node name="Shadow" type="Sprite2D" parent="."]
 position = Vector2(0.20747884, 14.998565)
@@ -2004,18 +2040,20 @@ scale = Vector2(0.07990246, 0.13119489)
 texture = ExtResource("2_ppdxs")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.99990433, 0.013831923)
 sprite_frames = SubResource("SpriteFrames_37lpg")
-animation = &"JumpR&L"
-frame_progress = 1.0
+animation = &"WalkUp"
+frame = 6
+frame_progress = 0.933902
 
 [node name="TDCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0.16598308, 11.998853)
+position = Vector2(-0.84775317, 11.012782)
 shape = SubResource("CircleShape2D_83xs0")
 disabled = true
 debug_color = Color(0, 0.93082035, 0.43268114, 0.41960785)
 
 [node name="PFCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0.020747688, 0.9860726)
+position = Vector2(-0.9860724, 1.0137362)
 shape = SubResource("RectangleShape2D_ypfnu")
 disabled = true
 debug_color = Color(0, 0.88235295, 0.9019608, 0.21568628)
