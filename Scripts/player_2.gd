@@ -38,12 +38,12 @@ func _physics_process(delta):
 			velocity.y += HOLD_JUMP_FORCE * delta
 
 		if not is_on_floor():
-			PlayerAnim.play("Jump")
+			PlayerAnim.play("JumpR&L")
 		else:
 			if dir == 0:
-				PlayerAnim.play("Idle")
+				PlayerAnim.play("IdleR&L")
 			else:
-				PlayerAnim.play("Walk")
+				PlayerAnim.play("WalkR&L")
 
 		move_and_slide()
 
