@@ -56,7 +56,7 @@ Platform = true
 Camera = false
 
 [node name="Player2" parent="." instance=ExtResource("4_0jpfo")]
-position = Vector2(140, 12)
+position = Vector2(140, 19)
 Platform = true
 Camera = false
 

@@ -2035,16 +2035,14 @@ script = ExtResource("1_8qn36")
 Speed = 150.0
 
 [node name="Shadow" type="Sprite2D" parent="."]
-position = Vector2(0.20747884, 14.998565)
-scale = Vector2(0.07990246, 0.13119489)
+position = Vector2(-0.7924255, 15.012398)
+scale = Vector2(0.03946066, 0.064791955)
 texture = ExtResource("2_ppdxs")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.99990433, 0.013831923)
 sprite_frames = SubResource("SpriteFrames_37lpg")
-animation = &"WalkUp"
-frame = 6
-frame_progress = 0.933902
+animation = &"WalkR&L"
 
 [node name="TDCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-0.84775317, 11.012782)
