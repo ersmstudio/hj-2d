@@ -2042,7 +2042,9 @@ texture = ExtResource("2_ppdxs")
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.99990433, 0.013831923)
 sprite_frames = SubResource("SpriteFrames_37lpg")
-animation = &"WalkR&L"
+animation = &"DieR&L"
+frame = 10
+frame_progress = 0.17022379
 
 [node name="TDCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-0.84775317, 11.012782)
