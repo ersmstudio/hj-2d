@@ -62,7 +62,7 @@ func _physics_process(delta):
 			velocity = dir.normalized() * Speed
 
 			if abs(dir.x) > abs(dir.y):
-				PlayerAnim.play("Walk")
+				PlayerAnim.play("WalkR&L")
 				PlayerAnim.flip_h = dir.x < 0
 			else:
 				if dir.y < 0:
@@ -71,6 +71,6 @@ func _physics_process(delta):
 					PlayerAnim.play("WalkDown")
 		else:
 			velocity = Vector2.ZERO
-			PlayerAnim.play("Idle")
+			PlayerAnim.play("IdleR&L")
 
 		move_and_slide()

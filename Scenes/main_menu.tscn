@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dqmebu0l0qaoo" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_1ehe0"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://c86piyn1rsc1u" path="res://Scenes/scene_1.tscn" id="2_ce3w2"]
+=======
+[ext_resource type="Resource" uid="uid://c86piyn1rsc1u" path="res://Scenes/scene_1.tscn" id="2_ce3w2"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://brgvrp50fu0rk" path="res://Sprites/Background/Yellow.png" id="3_ce3w2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
