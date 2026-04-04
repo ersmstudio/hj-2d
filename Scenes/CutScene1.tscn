@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://c78hremtycie6"]
+
+[ext_resource type="Texture2D" uid="uid://b0a78xsi4v4ic" path="res://Sprites/CutScenes1.png" id="1_elwdl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dixcv"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avlt3"]
+bg_color = Color(0.18431373, 0.18431373, 0.18431373, 0.1764706)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="CutScene1" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dixcv")
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -567.0
+offset_top = -238.0
+offset_right = 570.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_avlt3")
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 56
+text = "......... ...... ...... ......."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel2"]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 13.0
+offset_right = 111.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 36
+text = "You
+"
+
+[node name="CutScenes1" type="Sprite2D" parent="."]
+position = Vector2(648, 331)
+scale = Vector2(16.375, 16.375)
+texture = ExtResource("1_elwdl")
