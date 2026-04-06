@@ -1,0 +1,4 @@
+[gd_scene load_steps=12 format=3 uid="uid://bys52s7i3hayh"]
+
+[ext_resource type="Script" uid="uid://dqmebu0l0qaoo" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="FontFile" uid="uid://cnhprgjd77c7c" path="res://Fonts/HVD_Comic_Serif_Pro.otf" id="2_1ehe0"]
