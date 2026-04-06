@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c86piyn1rsc1u"]
+[gd_scene load_steps=8 format=3 uid="uid://c86piyn1rsc1u"]
 
 [ext_resource type="Texture2D" uid="uid://beiu0m3p366ka" path="res://Sprites/Background/Brown.png" id="1_0jpfo"]
 [ext_resource type="Texture2D" uid="uid://cj8apsiybs1j2" path="res://icon.svg" id="1_23sq3"]
 [ext_resource type="PackedScene" uid="uid://48js65xhq68l" path="res://Scenes/Players/player.tscn" id="2_n8be1"]
 [ext_resource type="PackedScene" uid="uid://cdynjffhqkm07" path="res://Scenes/Players/player2.tscn" id="4_0jpfo"]
+[ext_resource type="PackedScene" uid="uid://barsro3a0l326" path="res://Scenes/Enemies/RatGround.tscn" id="5_cruhp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8be1"]
 size = Vector2(128, 129)
@@ -61,3 +62,5 @@ Camera = false
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -45)
 zoom = Vector2(3.005, 3.005)
+
+[node name="RatGround" parent="." instance=ExtResource("5_cruhp")]

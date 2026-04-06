@@ -1848,6 +1848,7 @@ size = Vector2(11.98502, 30.024794)
 
 [node name="Player2" type="CharacterBody2D" groups=["Player2"]]
 rotation = 0.013832364
+collision_layer = 3
 script = ExtResource("1_tgwsj")
 
 [node name="Shadow" type="Sprite2D" parent="."]
@@ -1856,9 +1857,10 @@ scale = Vector2(0.03528277, 0.13119489)
 texture = ExtResource("2_jcvir")
 
 [node name="PlayerAnimation" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -0.735)
+position = Vector2(1.2212151, 15.984639)
 sprite_frames = SubResource("SpriteFrames_y6uwr")
 animation = &"DashDown"
+offset = Vector2(0, -16)
 
 [node name="TDCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0.6090727, 11.992723)
